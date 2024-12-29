@@ -1,0 +1,9 @@
+<div class="contents row">
+  <% @albums.each do |album| %>
+    <div class="content_post" style="background-image: url(<%= album.image %>);">
+      <span class="name">
+        <%= album.title %>
+      </span>
+    </div>
+  <% end %>
+</div>
