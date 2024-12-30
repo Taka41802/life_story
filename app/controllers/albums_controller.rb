@@ -12,4 +12,11 @@ class AlbumsController < ApplicationController
     Album.create(album_params)
     redirect_to '/'
   end
+
+  private
+
+  def album_params
+    params.require(:album).permit(:title, :user)
+  end
+
 end
