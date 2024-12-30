@@ -7,5 +7,9 @@ class AlbumsController < ApplicationController
   def new
     @album = Album.new
   end
-  
+
+  def create
+    Album.create(album_params)
+    redirect_to '/'
+  end
 end
